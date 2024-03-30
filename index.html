@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon Hero</title>
+    <script src="js/artyom.window.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="title-left">Pokémon Hero</h1>
+        <h1 class="title-right">Pokémon Hero</h1>
+    </header>
+    <div class="container">
+        <div class="column">
+            <h2>Instrucciones del juego:</h2>
+            <p>Teclas para cada botón:</p>
+            <ul>
+                <li>Botón 1: <kbd>A</kbd></li>
+                <li>Botón 2: <kbd>S</kbd></li>
+                <li>Botón 3: <kbd>D</kbd></li>
+                <li>Botón 4: <kbd>K</kbd></li>
+                <li>Botón 5: <kbd>L</kbd></li>
+            </ul>
+            <p>Condiciones:</p>
+            <ul>
+                <li>15 desaciertos: Pierdes el juego.</li>
+                <li>20 aciertos: Ganaste el juego.</li>
+            </ul>
+                
+            <hr> <!-- Línea divisoria -->
+            <h2>Registrar Datos</h2>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" placeholder="Ingrese su nombre">
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" placeholder="Ingrese su edad">
+            <button class="button" id="botonRegistrar">Registrar</button>
+            <hr> <!-- Línea divisoria -->
+            <h2>Contadores</h2>
+            <div id="contenedorPuntos">
+                <div id="contenedorAcertados">Aciertos: <span id="acertados">0</span></div>
+                <div id="contenedorDesacertados">Desaciertos: <span id="desacertados">0</span></div>
+                <div id="contenedorPuntosTotal">Puntos: <span id="puntos">0</span></div>
+            </div>
+            <button class="button" id="botonComenzar">Comenzar</button>
+        </div>
+        <div class="column">
+            <h2>Tablero de Botones</h2>
+            <div id="contenedor">
+                <div id="boton1" class="boton"></div>
+                <div id="boton2" class="boton"></div>
+                <div id="boton3" class="boton"></div>
+                <div id="boton4" class="boton"></div>
+                <div id="boton5" class="boton"></div>
+            </div>
+            
+        </div>
+        <div class="column">
+            <h2>Información del Pokémon</h2>
+            <input type="text" id="pokemonName" placeholder="Ingrese el nombre del Pokémon">
+            <img class="pokeball" src="images/pokeball.png" alt="Pokeball">
+            <div id="resultado" class="pokemon-image"></div>
+            <div id="videoContainer"></div>
+        </div>
+    </div>
+
+    <!-- Modal de registro exitoso -->
+    <div id="modalRegistroExitoso" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Registro exitoso: puedes escribir el nombre de un Pokemon</p>
+        </div>
+    </div>
+
+    <!-- Modal Ganaste -->
+    <div id="modalGanaste" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>¡Ganaste!</p>
+        </div>
+    </div>
+
+    <!-- Modal Perdiste -->
+    <div id="modalPerdiste" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Perdiste</p>
+        </div>
+    </div>
+    <p id="activar">ACTIVAR VOZ</p>
+    <script src="js/main.js"></script>
+</body>
+</html>
