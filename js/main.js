@@ -85,12 +85,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }, 50);
         }, retraso);
     }
-
-    function getRandomBoton() {
-        const botones = ['boton1', 'boton3', 'boton4', 'boton5'];
-        return botones[Math.floor(Math.random() * botones.length)];
-    }
-
+    
     function getRandomOrden() {
         return Math.random() - 0.5;
     }
